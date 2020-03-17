@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+
+* {
+    font-family: 'Monserrat';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0C0E1D;
+}
+
+
+.logo {
+    height: 35px;
+margin-top: 10px;
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 0 0 4%;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat:900';
+    align-items: center;
+
+}
+
+nav li {
+    display: inline;
+    padding: 5px 45px 5px 5px;
+}
+
+nav a {
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 8px 20px;
+    font-size: .75em;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: ease-in 200ms;
+}
+
+nav a:hover {
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: #ffffff35;
+}
+
+#Donate a{
+	position: absolute;
+	right: 0;
+	top: 15px;
+	margin-right: 5em;
+	font-size: 14px;
+	text-transform: capitalize;
+	transition: ease 400ms;
+    color: rgb(255, 255, 255);
+    border: solid 2px #ffd504;
+
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+#Donate :hover{
+    background-color: #ffd504;
+    color: #000000;
+    border: solid 2px #000000;
+	padding: 7px 20px;
+}
+
+
+
+/* MAIN CCONTENT */
+
+
+body {
+    font-family: "Montserrat";
+}
+
+.SecNav{
+    padding: 40px;
+    background-color: #ececec;
+}
+
+.SecNav li{
+    display: inline;
+}
+
+.arrow{
+    width: 10px;
+    padding: 0 0 1px 8px;
+}
+
+.filterList a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: 500;
+
+    background-color: #ffd504;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+
+    transition: background-color .2s ease-in-out;
+
+}
+
+.filters a:hover{
+    background-color: #ffffff;
+}
+
+.filterList .sort{
+    background-color: transparent;
+    padding: 0;
+}
+
+.sort a{
+    color: black;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #ffffff9d;
+    border-radius: 10px;
+}
+
+.sorts{
+    float: right;
+    margin-bottom: 5px;
+}
+
+.sort a:hover{
+    transition: ease 400ms;
+    background-color: #0C0E1D;
+    color: white;
+}
+
+
+/* PET SELECTION TABS */
+
+.main{
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+.wrapper{
+    background-color: #00000020;
+    border-radius: 20px;
+    align-content: center;
+}
+
+.tabs{
+    display: inline-block; 
+}
+
+.petImg{
+    height: 234.6px;
+    width: 234.6px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tabs{
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #0C0E1D;
+    
+}
+
+
+.tabsContent a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.tabsContent{
+    padding: 5px 5px 10px 5px;
+    width: 234.6px;
+    text-align: center;
+}
+
+.tabsContent :hover{
+    transition: ease 300ms;
+    opacity: 0.70;
+}
+
+.tabsContent h3{
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px;
+    line-height: 20px;
+
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width:1024px){
+
+.petImg{
+    height: 197.5px;
+    width: 197.5px;
+}
+
+.tabsContent{
+    width: 197.5px;
+    }
+}
+
+
+
+/* PAGES */
+
+.pages{
+    margin: 20px;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+}
+
+.pages ul{
+    text-align: center;
+}
+
+.pages li{
+    padding: 5px 0px;
+    display: inline;
+    margin: 5px;
+}
+
+.pages li a{
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    background-color: #00000015;
+
+    transition: background-color .1s ease-in-out;
+}
+.pages li a:hover{
+    background-color: #ffd412;
+}
+
+.arrowPagesL{
+    transform: rotate(90deg);
+    padding: 2px 5px;
+}
+
+.arrowPagesR{
+    transform: rotate(270deg);
+    padding: 2px 5px;
+}
+
+
+
+
+
+
+/* Footer
+--------------------------------------------- */
+
+footer{
+	margin: 0;
+	padding: 0;
+
+    background-color: #ffffff36;
+	color: rgb(0, 0, 0);
+}
+
+.FooterLogo img{
+	height: 35px;
+	margin: 0 0 10px 20px;
+}
+
+.footerWrapper{
+    padding: 30px 40px 20px 40px;
+    background-color: #eeeeee;
+}
+
+.column{
+	display: inline-block;
+	padding: 1em;
+	padding-right: 2em;
+	vertical-align: text-top;
+}
+
+.column li{
+	font-size: 12px;
+	padding: 5px;
+}
+
+.column .bold{
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.columnExtra{
+	margin-right: 1.5em;
+	padding: 5px 2em;
+	width: 15em
+}
+
+.columnExtra li{
+	padding: 16px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
+/* SignUp
+--------------------------------------------- */
+
+.news{
+	margin: 20px;
+	padding: 0;
+	width: 20em;
+	text-align: center;
+}
+
+.news h3{
+	padding: 20px;
+	font-weight: 500;
+	font-size: 14px;
+	background-color: #00000015;
+	border-radius: 15px;
+}
+
+.news .signup{
+	padding-top: 0;
+}
+
+.news .signup a{
+	padding: 5px 20px;
+	text-decoration: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.news a:hover{
+	color: white;
+	background-color: #ffd412;
+	border: transparent;
+	transition: ease 500ms;
+	padding: 5px 35px;
+}
+
+
+
+
+
+.social{
+	position: absolute;
+	right: 116px;
+	margin: 140px 0 0 0;
+	/* margin: 0 120px 0 0; */
+}
+
+.fa {
+
+	padding: 10px;
+	font-size: 30px;
+	width: 20px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 5px;
+	border-radius: 10px;
+  }
+  
+  .fa:hover {
+	  opacity: 0.8;
+	  background-color: black;
+  }
+  
+  .fa-facebook {
+	background: #ffd412;
+	color: white;
+  }
+  
+  .fa-twitter {
+	background: #ffd412;
+	color: white;
+  }
+  
+  .fa-instagram {
+	background: #ffd412;
+	color: white;
+  }
+  

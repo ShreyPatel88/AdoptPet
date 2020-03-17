@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+
+* {
+    font-family: 'Monserrat';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0C0E1D;
+}
+
+
+.logo {
+    height: 35px;
+margin-top: 10px;
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 0 0 4%;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat:900';
+    align-items: center;
+
+}
+
+nav li {
+    display: inline;
+    padding: 5px 45px 5px 5px;
+}
+
+nav a {
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 8px 20px;
+    font-size: .75em;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: ease-in 200ms;
+}
+
+nav a:hover {
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: #ffffff35;
+}
+
+#Donate a{
+	position: absolute;
+	right: 0;
+	top: 15px;
+	margin-right: 5em;
+	font-size: 14px;
+	text-transform: capitalize;
+	transition: ease 300ms;
+    color: rgb(255, 255, 255);
+    border: solid 2px #ffd504;
+
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+#Donate :hover{
+    background-color: #ffd504;
+    color: #000000;
+    border: solid 2px #000000;
+	padding: 7px 20px;
+}
+
+
+
+
+
+
+/* MAIN */
+
+.contactForm{
+    padding: 50px;
+    text-align: center;
+
+}
+.form{
+    padding: 20px;
+    text-align: center;
+    background-color: #ffd412;
+    border-radius: 20px;
+}
+
+::placeholder{
+    text-align: center;
+    color: #00000050;
+    text-transform: uppercase;
+}
+
+.form h1{
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    text-transform: uppercase;
+    min-width:100px;
+    max-width:100px;
+    text-align:center;
+    margin:0 auto 0px auto;
+    padding:10px 10px;
+    border-bottom: solid 3px black;
+}
+
+.form h2{
+    color: #000000;
+    font-size: 14px;
+    padding: 15px 0 20px 0;
+}
+
+.svg{
+    height: 150px;
+    margin: 30px 0 0px 0;
+}
+
+.form{
+    margin: 0 20px;
+}
+
+
+input{
+    width: 400px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+input:focus{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+select, option{
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    appearance: none;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align-last:center;
+    text-indent: 5px;
+    height: calc(1em + 20px);
+    background-color: #ffffff;
+    color: #00000050;
+}
+
+select:focus{
+    background-color: #000000;
+}
+
+textarea{
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 400px;
+    height: auto;
+    padding: 15px;
+    font-weight: 600;
+}
+textarea:focus{
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+
+button{
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    transition: padding .4s ease-in-out;
+}
+
+button:hover{
+    padding: 10px 35px;
+}
+
+
+
+/* Footer
+--------------------------------------------- */
+
+footer{
+	margin: 0;
+	padding: 0;
+
+    background-color: #ffffff36;
+	color: rgb(0, 0, 0);
+}
+
+.FooterLogo img{
+	height: 35px;
+	margin: 0 0 10px 20px;
+}
+
+.footerWrapper{
+    padding: 30px 40px 20px 40px;
+    background-color: #eeeeee;
+}
+
+.column{
+	display: inline-block;
+	padding: 1em;
+	padding-right: 2em;
+	vertical-align: text-top;
+}
+
+.column li{
+	font-size: 12px;
+	padding: 5px;
+}
+
+.column .bold{
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.columnExtra{
+	margin-right: 1.5em;
+	padding: 5px 2em;
+	width: 15em
+}
+
+.columnExtra li{
+	padding: 16px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
+/* SignUp
+--------------------------------------------- */
+
+.news{
+	margin: 20px;
+	padding: 0;
+	width: 20em;
+	text-align: center;
+}
+
+.news h3{
+	padding: 20px;
+	font-weight: 500;
+	font-size: 14px;
+	background-color: #00000015;
+	border-radius: 15px;
+}
+
+.news .signup{
+	padding-top: 0;
+}
+
+.news .signup a{
+	padding: 5px 20px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+    font-weight: 700;
+    transition: padding .4s ease-in-out;
+
+}
+
+.news a:hover{
+	color: rgb(0, 0, 0);
+	background-color: #ffd412;
+	border: transparent;
+	
+    padding: 5px 35px;
+    
+}
+
+.social{
+	position: absolute;
+	right: 116px;
+	margin: 140px 0 0 0;
+	/* margin: 0 120px 0 0; */
+}
+
+.fa {
+
+	padding: 10px;
+	font-size: 30px;
+	width: 20px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 5px;
+	border-radius: 10px;
+  }
+  
+  .fa:hover {
+	  opacity: 0.8;
+	  background-color: black;
+  }
+  
+  .fa-facebook {
+	background: #ffd412;
+	color: white;
+  }
+  
+  .fa-twitter {
+	background: #ffd412;
+	color: white;
+  }
+    
+  .fa-instagram {
+	background: #ffd412;
+	color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
