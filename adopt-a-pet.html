@@ -7,29 +7,553 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Sapkota</title>
-    <link rel="stylesheet" href="style2.css">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+        @font-face {
+            font-family: Montserrat-Bold;
+            src: url('Montserrat-Bold.ttf');
+        }
+
+        @font-face {
+            font-family: Montserrat-Medium;
+            src: url('Montserrat-Medium.ttf');
+        }
+
+
+        * {
+            font-family: Montserrat-Medium;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0C0E1D;
+        }
+
+
+        .logo {
+            height: 35px;
+            margin-top: 10px;
+            position: absolute;
+            top: 2.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0 0 0 4%;
+            padding: 20px;
+            text-transform: uppercase;
+            font-family: 'Montserrat:900';
+            align-items: center;
+
+        }
+
+        nav li {
+            font-family: Montserrat-Medium;
+            display: inline;
+            padding: 5px 45px 5px 5px;
+        }
+
+        nav a {
+            letter-spacing: 1px;
+            font-weight: normal;
+            padding: 8px 20px;
+            font-size: .75em;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: ease-in 200ms;
+        }
+
+        nav a:hover {
+            border-radius: 10px;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            background-color: #ffffff35;
+        }
+
+        #Donate a {
+            position: absolute;
+            right: 0;
+            top: 15px;
+            margin-right: 5em;
+            font-size: 14px;
+            text-transform: capitalize;
+            transition: ease 400ms;
+            color: rgb(255, 255, 255);
+            border: solid 2px #ffd504;
+
+            padding: 7px 15px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        #Donate :hover {
+            background-color: #ffd504;
+            color: #000000;
+            border: solid 2px #000000;
+            padding: 7px 20px;
+        }
+
+
+
+        /* MAIN CCONTENT */
+
+
+        body {
+            font-family: "Montserrat";
+        }
+
+        .SecNav {
+            padding: 40px;
+            background-color: #ececec;
+        }
+
+        .SecNav li {
+            display: inline;
+        }
+
+        .arrow {
+            width: 10px;
+            padding: 0 0 1px 8px;
+        }
+
+        .filterList a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: 500;
+            font-family: Montserrat-Medium;
+            background-color: #ffd504;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 10px;
+
+            transition: background-color .2s ease-in-out;
+
+        }
+
+        .filters a:hover {
+            background-color: #ffffff;
+        }
+
+        .filterList .sort {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .sort a {
+            color: black;
+            font-weight: 600;
+            padding: 10px 20px;
+            background-color: #ffffff9d;
+            border-radius: 10px;
+        }
+
+        .sorts {
+            float: right;
+            margin-bottom: 5px;
+        }
+
+        .sort a:hover {
+            transition: ease 400ms;
+            background-color: #0C0E1D;
+            color: white;
+        }
+
+
+        /* PET SELECTION TABS */
+
+        .main {
+            font-family: Montserrat-Medium;
+            background-color: #ffffff;
+            padding: 50px;
+        }
+
+        .wrapper {
+            background-color: #00000020;
+            border-radius: 20px;
+            align-content: center;
+        }
+
+        .tabs {
+            display: inline-block;
+        }
+
+        .petImg {
+            height: 234.6px;
+            width: 234.6px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .tabs {
+            margin: 9.5px;
+            border-radius: 15px;
+            background-color: #0C0E1D;
+
+        }
+
+
+        .tabsContent a {
+            font-family: Montserrat-Bold;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+        }
+
+
+        .tabsContent {
+            padding: 5px 5px 10px 5px;
+            width: 234.6px;
+            text-align: center;
+        }
+
+        .tabsContent :hover {
+            transition: ease 300ms;
+            opacity: 0.70;
+        }
+
+        .tabsContent h3 {
+            font-family: Montserrat-Medium;
+            font-weight: 400;
+            font-size: 12px;
+            padding: 5px;
+            line-height: 20px;
+
+            opacity: 0.7;
+        }
+
+
+        @media screen and (max-width:1024px) {
+
+            .petImg {
+                height: 197.5px;
+                width: 197.5px;
+            }
+
+            .tabsContent {
+                width: 197.5px;
+            }
+        }
+
+
+
+        /* PAGES */
+
+        .pages {
+            font-family: Montserrat-Medium;
+            margin: 20px;
+            margin-bottom: 50px;
+            background-color: #ffffff;
+        }
+
+        .pages ul {
+            text-align: center;
+        }
+
+        .pages li {
+            padding: 5px 0px;
+            display: inline;
+            margin: 5px;
+        }
+
+        .pages li a {
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: 200px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            color: black;
+            background-color: #00000015;
+
+            transition: background-color .1s ease-in-out;
+        }
+
+        .pages li a:hover {
+            background-color: #ffd412;
+        }
+
+        .arrowPagesL {
+            transform: rotate(90deg);
+            padding: 2px 5px;
+        }
+
+        .arrowPagesR {
+            transform: rotate(270deg);
+            padding: 2px 5px;
+        }
+
+
+
+
+
+
+        /* Footer
+--------------------------------------------- */
+
+        footer {
+            margin: 0;
+            padding: 0;
+
+            background-color: #ffffff36;
+            color: rgb(0, 0, 0);
+        }
+
+        .FooterLogo img {
+            height: 35px;
+            margin: 0 0 10px 20px;
+        }
+
+        .footerWrapper {
+            padding: 30px 20px 20px 40px;
+            background-color: #eeeeee;
+        }
+
+        .column {
+            font-family: Montserrat-Medium;
+            display: inline-block;
+            padding: 1em;
+            padding-right: 2em;
+            vertical-align: text-top;
+        }
+
+        .column li {
+            font-size: 12px;
+            padding: 5px;
+        }
+
+        .column .bold {
+            font-family: Montserrat-bold;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .columnExtra {
+            margin-right: 1.5em;
+            padding: 5px 2em;
+            width: 15em
+        }
+
+        .columnExtra li {
+            font-family: Montserrat-Medium;
+            padding: 16px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+
+        /* SignUp
+--------------------------------------------- */
+
+        .news {
+            margin: 20px;
+            padding: 0;
+            width: 20em;
+            text-align: center;
+        }
+
+        .news h3 {
+            padding: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            background-color: #00000015;
+            border-radius: 15px;
+        }
+
+        .news .signup {
+            padding-top: 0;
+        }
+
+        .news .signup a {
+            font-family: Montserrat-bold;
+            padding: 5px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            text-transform: uppercase;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .news a:hover {
+            color: white;
+            background-color: #ffd412;
+            border: transparent;
+            transition: ease 500ms;
+            padding: 5px 35px;
+        }
+
+
+
+
+
+        .social {
+            position: absolute;
+            right: 90px;
+            margin: 140px 0 0 0;
+            /* margin: 0 120px 0 0; */
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 30px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 5px;
+            border-radius: 10px;
+        }
+
+        .fa:hover {
+            opacity: 0.8;
+            background-color: black;
+        }
+
+        .fa-facebook {
+            background: #ffd412;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #ffd412;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #ffd412;
+            color: white;
+        }
+
+
+        @media screen and (max-width:1024px) {
+
+
+            footer {
+                transform: scale(1);
+            }
+
+            .column {
+                transform: scale(0.9);
+                padding-right: 1em;
+                padding: 0.5em;
+            }
+
+            .columnExtra {
+                display: none;
+            }
+
+            .news {
+                margin-left: 10px;
+
+                transform: scale(0.7);
+            }
+
+            .social {
+                right: 152px;
+            }
+
+        }
+
+
+
+
+        @media screen and (min-width:1208px) and (max-width:1380px) {
+
+            .sidePanel {
+                padding: 0;
+                transform: scale(0.95);
+                top: 500px;
+            }
+
+            .panels {
+                padding: 17px 25px 17px 25px;
+
+            }
+
+            .mission {
+                padding: 0;
+                transform: scale(0.95);
+            }
+
+            .missionP {
+                margin: 0;
+                padding: 20px;
+            }
+
+
+
+
+
+
+            .petImg {
+                height: 197.5px;
+                width: 202.5px;
+            }
+
+            .tabsContent {
+                width: 202.5px;
+
+            }
+
+
+            /* Footer */
+
+            footer {
+                transform: scale(1);
+            }
+
+            .column {
+                transform: scale(1);
+                padding-right: 1em;
+                padding: .2em;
+            }
+
+            .news {
+                margin-left: 10px;
+                transform: scale(1);
+            }
+
+            .social {
+                right: 152px;
+            }
+
+
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="logoYW.png" alt="Cerritos Pet Shelter Logo" class="logo"></a>
+        <a href="index.html"><img src="https://i.imgur.com/BJutXud.png" alt="Cerritos Pet Shelter Logo"
+                class="logo"></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="Donate" ><a href="https://www.paws.org/donate-now/" target="_blank">DONATE</a></li>
+                <li id="Donate"><a href="https://www.paws.org/donate-now/" target="_blank">DONATE</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="SecNav">
         <ul class="filterList">
-            <li class="filters"><a href="#">All Pet Types<img src="arrowB.png" alt="" class="arrow"></a></li>
-            <li class="filters"><a href="#">20 Miles<img src="arrowB.png" alt="" class="arrow"></a></li>
-            <li class="filters"><a href="#">Cerritos<img src="arrowB.png" alt="" class="arrow"></a></li>
+            <li class="filters"><a href="#">All Pet Types<img src="https://i.imgur.com/UjalWvN.png" alt=""
+                        class="arrow"></a></li>
+            <li class="filters"><a href="#">20 Miles<img src="https://i.imgur.com/UjalWvN.png" alt="" class="arrow"></a>
+            </li>
+            <li class="filters"><a href="#">Cerritos<img src="https://i.imgur.com/UjalWvN.png" alt="" class="arrow"></a>
+            </li>
 
             <ul class="sorts">
                 <li class="sort"><a href="#">Select</a></li>
@@ -44,7 +568,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="dog1.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46751838/1/?bust=1584110967&width=600"
+                            alt="" class="petImg">
                         <h2>BANJO</h2>
                         <h3>Young | German Shephard<br>10 miles away</h3>
 
@@ -55,8 +580,9 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="dog2.jpeg" alt="" class="petImg">
-                        <h2>AUBREY</h2>
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46960008/1/?bust=1584110964&width=1080"
+                            alt="" class="petImg">
+                        <h2>NOLA</h2>
                         <h3>Young | Pitbull Terrier Mix<br>2 miles away</h3>
                     </a>
                 </div>
@@ -65,7 +591,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="parrot.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/45571705/3/?bust=1565468898&width=600"
+                            alt="" class="petImg">
                         <h2>HARLEY</h2>
                         <h3>Adult | Macaw<br>13 miles away</h3>
                     </a>
@@ -75,7 +602,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="cat2.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/38589406/2/?bust=1499378942&width=600"
+                            alt="" class="petImg">
                         <h2>AUGUSTINE</h2>
                         <h3>Adult | Domestic Short Hair<br>2 miles away</h3>
                     </a>
@@ -86,7 +614,8 @@
 
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="cat1.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/44806847/2/?bust=1581303783&width=600"
+                            alt="" class="petImg">
                         <h2>RIVER</h2>
                         <h3>Young | Domestic Short Hair<br>2 miles away</h3>
                     </a>
@@ -97,7 +626,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="pig.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46458088/1/?bust=1572715937&width=600"
+                            alt="" class="petImg">
                         <h2>SALLY, LILLI, MORTICIA</h2>
                         <h3>Adult | Short Hair<br>10 miles away</h3>
                     </a>
@@ -107,7 +637,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="cat3.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47405267/1/?bust=1584110964&width=600"
+                            alt="" class="petImg">
                         <h2>FATS</h2>
                         <h3>Adult | Tabby Mix<br>2 miles away</h3>
                     </a>
@@ -117,7 +648,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="rabbit2.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47303067/1/?bust=1580932415&width=600"
+                            alt="" class="petImg">
                         <h2>PINK</h2>
                         <h3>Young | Lionhead<br>11 miles away</h3>
                     </a>
@@ -127,7 +659,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="dog3.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47563973/1/?bust=1584462896&width=600"
+                            alt="" class="petImg">
                         <h2>GRACIE</h2>
                         <h3>Adult | Pitbull Terrier<br>3 miles away</h3>
                     </a>
@@ -137,7 +670,8 @@
             <div class="tabs">
                 <div class="tabsContent">
                     <a href="#">
-                        <img src="rabbit1.jpeg" alt="" class="petImg">
+                        <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47630333/1/?bust=1584380848&width=600"
+                            alt="" class="petImg">
                         <h2>LENNOX</h2>
                         <h3>Baby | American<br>6 miles away</h3>
                     </a>
@@ -149,7 +683,7 @@
 
     <div class="pages">
         <ul>
-            <a href="#"><img src="arrowB.png" alt="" class="arrow arrowPagesL"></a>
+            <a href="#"><img src="https://i.imgur.com/UjalWvN.png" alt="" class="arrow arrowPagesL"></a>
             <li class="pgNoM"><a href="#">1</a></li>
             <li class="pgNo"><a href="#">2</a></li>
             <li class="pgNo"><a href="#">3</a></li>
@@ -160,90 +694,90 @@
             <li class="pgNo"><a href="#">8</a></li>
             <li class="pgNo"><a href="#">9</a></li>
             <li class="pgNo"><a href="#">10</a></li>
-            <a href="#"><img src="arrowB.png" alt="" class="arrow arrowPagesR"></a>
+            <a href="#"><img src="https://i.imgur.com/UjalWvN.png" alt="" class="arrow arrowPagesR"></a>
         </ul>
     </div>
 </body>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
 
-    <footer>
-        <div class="footerWrapper">
+<footer>
+    <div class="footerWrapper">
 
-            <div class="FooterLogo"><img src="FooterLogo.png" alt=""></div>
+        <div class="FooterLogo"><img src="https://i.imgur.com/Wzh9Jnm.png" alt=""></div>
 
-            <div class="column">
-                <ul>
-                    <li class="bold">ABOUT US</li>
-                    <li>FAQs</li>
-                    <li>Partnership</li>
-                    <li>Terms of Service</li>
-                    <li>Mobile Site & Apps</li>
-                    <li>Petfinder Foundation</li>
-                    <li>Put Petfinder On Your Site</li>
-                    <li>Press</li>
-                    <li>For Developers</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <ul>
-                    <li class="bold">PET ADOPTION</li>
-                    <li>Dog Adoption</li>
-                    <li>Cat Adoption</li>
-                    <li>Other Pet Adoption</li>
-                    <li>Search Adoption Organizations</li>
-                    <li>Pet-Adoption Organizations</li>
-                    <li>Local Adoption Events</li>
-                    <li>Shelters</li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <ul>
-                    <li class="bold">PET CARE TOPICS</li>
-                    <li>Dog Care</li>
-                    <li>Dog Breeds</li>
-                    <li>Cat Care</li>
-                    <li>Cat Breeds</li>
-                    <li>All Pet Care</li>
-                    <li>Pet Care Videos</li>
-                    <li>Helping Pets</li>
-                </ul>
-            </div>
-
-            <div class="column columnExtra">
-                <ul>
-                    <li>
-                        <h2>SITEMAP</h2>
-                    </li>
-                    <li>
-                        <h2>PRIVACY POLICY</h2>
-                    </li>
-                    <li>
-                        <h2>ABOUT OUR ADS</h2>
-                    </li>
-                    <li>
-                        <h2>SHELTER & RESCUE LOGIN</h2>
-                    </li>
-                    <li>
-                        <h2>SHELTER & RESCUE REGISTRATION</h2>
-                    </li>
-                </ul>
-            </div>
-
-            <div class=" column news">
-                <h3>To get the latest, sign up for the Petfinder newsletter.</h3>
-                <h2 class="signup"><a href="#">Sign Up</a></h2>
-            </div>
-
-            <div class="column social">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            </div>
+        <div class="column">
+            <ul>
+                <li class="bold">ABOUT US</li>
+                <li>FAQs</li>
+                <li>Partnership</li>
+                <li>Terms of Service</li>
+                <li>Mobile Site & Apps</li>
+                <li>Petfinder Foundation</li>
+                <li>Put Petfinder On Your Site</li>
+                <li>Press</li>
+                <li>For Developers</li>
+                <li>Contact Us</li>
+            </ul>
         </div>
-    </footer>
+
+        <div class="column">
+            <ul>
+                <li class="bold">PET ADOPTION</li>
+                <li>Dog Adoption</li>
+                <li>Cat Adoption</li>
+                <li>Other Pet Adoption</li>
+                <li>Search Adoption Organizations</li>
+                <li>Pet-Adoption Organizations</li>
+                <li>Local Adoption Events</li>
+                <li>Shelters</li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <ul>
+                <li class="bold">PET CARE TOPICS</li>
+                <li>Dog Care</li>
+                <li>Dog Breeds</li>
+                <li>Cat Care</li>
+                <li>Cat Breeds</li>
+                <li>All Pet Care</li>
+                <li>Pet Care Videos</li>
+                <li>Helping Pets</li>
+            </ul>
+        </div>
+
+        <div class="column columnExtra">
+            <ul>
+                <li>
+                    <h2>SITEMAP</h2>
+                </li>
+                <li>
+                    <h2>PRIVACY POLICY</h2>
+                </li>
+                <li>
+                    <h2>ABOUT OUR ADS</h2>
+                </li>
+                <li>
+                    <h2>SHELTER & RESCUE LOGIN</h2>
+                </li>
+                <li>
+                    <h2>SHELTER & RESCUE REGISTRATION</h2>
+                </li>
+            </ul>
+        </div>
+
+        <div class=" column news">
+            <h3>To get the latest, sign up for the Petfinder newsletter.</h3>
+            <h2 class="signup"><a href="#">Sign Up</a></h2>
+        </div>
+
+        <div class="column social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </div>
+</footer>
 
 </html>

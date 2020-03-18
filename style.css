@@ -1,27 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-@font-face {
-	font-family: Montserrat-Regular;
-	src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
-  }
   
   @font-face {
 	font-family: Montserrat-Bold;
-	src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-  }
-  
-  @font-face {
-	font-family: Montserrat-ExtraBold;
-	src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf'); 
+	src: url('Montserrat-Bold.ttf'); 
   }
   
   @font-face {
 	font-family: Montserrat-Medium;
-	src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
+	src: url('Montserrat-Medium.ttf'); 
   }
 
 
 * {
-	font-family: Montserrat-Regular;
+	font-family: Montserrat-Me;
 	margin: 0;
 	padding: 0;
 }
@@ -38,8 +29,8 @@ header {
 }
 
 .MissionLine {
-	font-family: Montserrat-Regular;
-	background-image: url("DogBK.png");
+	font-family: Montserrat-Medium;
+	background-image: url("https://i.imgur.com/1TZQGrc.png");
 	padding: 17.1em 0;
 	color: white;
 	text-transform: uppercase;
@@ -73,7 +64,7 @@ header {
 }
 
 nav ul {
-	font-family: Montserrat-Regular;
+	font-family: Montserrat-Medium;
 	list-style: none;
 	margin: 1.2% 0 0 4%;
 	padding: 0;
@@ -83,7 +74,7 @@ nav ul {
 }
 
 nav li {
-	font-family: Montserrat-Regular;
+	font-family: Montserrat-Medium;
 	display: inline;
 	padding: 5px 45px 5px 5px;
 }
@@ -232,7 +223,7 @@ nav a:hover{
 	border-radius: 15px;
 	padding: 40px 10px;
 
-	background-image: url("panel.png");
+	background-image: url("https://i.imgur.com/RnroIKD.png");
 	background-size: cover;
 }
 
@@ -309,19 +300,19 @@ footer{
 }
 
 .footerWrapper{
-	padding: 30px 40px 20px 40px;
+	padding: 30px 20px 20px 40px;
 }
 
 .column{
-	font-family: Montserrat-Regular;
+	font-family: Montserrat-Medium;
 	display: inline-block;
 	padding: 1em;
-	padding-right: 2em;
+	padding-right: 1.5em;
 	vertical-align: text-top;
 }
 
 .column li{
-	font-family: Montserrat-Regular;
+	font-family: Montserrat-Medium;
 	font-size: 12px;
 	padding: 5px;
 }
@@ -369,6 +360,7 @@ footer{
 }
 
 .news .signup a{
+	font-family: Montserrat-Bold;
 	padding: 5px 20px;
 	text-decoration: none;
 	border-radius: 20px;
@@ -385,19 +377,17 @@ footer{
 	color: rgb(0, 0, 0);
 	background-color: #ffd412;
 	border: transparent;
-
 	padding: 5px 35px;
 }
 
 .social{
 	position: absolute;
-	right: 116px;
+	right: 120px;
 	margin: 140px 0 0 0;
 	/* margin: 0 120px 0 0; */
 }
 
 .fa {
-
 	padding: 10px;
 	font-size: 30px;
 	width: 20px;
@@ -446,4 +436,131 @@ footer{
 	background: #ffd412;
 	color: white;
   }
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+
+
+  
+
+  @media screen and (min-width:900px) and (max-width:1207px){
+
+	.section2{
+		background-color:#0C0E1D;
+	
+		height: 540px;
+
+	}
+
+	.sidePanel{
+		transform: scale(0.7);
+		position: absolute;
+		top: 476px;
+		left: 650px;
+
+		margin: 0;
+		padding: 0;
+	}
+	
+	.mission{
+		transform: scale(0.7);
+		position: relative;
+		right: 150px;	
+		bottom: 70px;	  
+	}
+
+/* Footer */
+
+	footer{
+		transform: scale(1);
+	}
+
+	.column{
+		transform: scale(0.9);
+		padding-right: 1em;
+		padding: 0.5em;
+	}
+
+	.columnExtra{
+		display: none;
+	}
+
+	.news{
+		margin-left: 10px;
+
+		transform: scale(0.7);
+	}
+
+	.social{
+		right: 152px;
+	}
+	  
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+  @media screen and (min-width:1208px) and (max-width:1380px){
+
+	.sidePanel{
+		padding: 0;
+		transform: scale(0.95);
+		top: 500px;
+	}
+
+	.panels{
+		padding: 17px 25px 17px 25px;
+
+	}
+
+	.mission{
+		padding: 0;
+		transform: scale(0.95);
+	}
+
+	.missionP{
+		margin: 0;
+		padding: 20px;
+	}
+
+
+/* Footer */
+
+
+
+	.column{
+		transform: scale(1);
+		padding-right: 1em;
+		padding: .2em;
+	}
+
+	.news{
+		margin-left: 10px;
+		transform: scale(1);
+	}
+
+	.social{
+		right: 152px;
+	}
+	
+
+  }
