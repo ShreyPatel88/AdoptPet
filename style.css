@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 @font-face {
 	font-family: Montserrat-Regular;
-	src: url('fonts/montserrat/Montserrat-Regular.ttf'); 
+	src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
   }
   
   @font-face {
 	font-family: Montserrat-Bold;
-	src: url('fonts/montserrat/Montserrat-Bold.ttf'); 
+	src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
   }
   
   @font-face {
 	font-family: Montserrat-ExtraBold;
-	src: url('fonts/montserrat/Montserrat-ExtraBold.ttf'); 
+	src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf'); 
   }
   
   @font-face {
 	font-family: Montserrat-Medium;
-	src: url('fonts/montserrat/Montserrat-Medium.ttf'); 
+	src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
   }
 
 html{
