@@ -19,9 +19,6 @@
 	src: url('../fonts/montserrat/Montserrat-Medium.ttf'); 
   }
 
-html{
-	font-family: Montserrat-Regular;
-}
 
 * {
 	font-family: Montserrat-Regular;
@@ -76,6 +73,7 @@ header {
 }
 
 nav ul {
+	font-family: Montserrat-Regular;
 	list-style: none;
 	margin: 1.2% 0 0 4%;
 	padding: 0;
@@ -85,6 +83,7 @@ nav ul {
 }
 
 nav li {
+	font-family: Montserrat-Regular;
 	display: inline;
 	padding: 5px 45px 5px 5px;
 }
